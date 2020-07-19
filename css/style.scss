@@ -583,9 +583,31 @@ div.learning {
       }
     }
   }
+
+  div.learning {
+    div.wrapper {
+      p {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+      div.boxes {
+        flex-direction: column;
+        div.circle:not(:first-child) {
+          margin: 20px 0 0;
+        }
+        div.circle {
+          img {
+            width: 100%;
+            max-width: 130px;
+          }
+        }
+      }
+    }
+  }
+
 }
 
-/*メディアクエリ スマホサイズ*/
+/*メディアクエリ lgサイズ*/
 @include lg {
   div.introduction {
     div.wrapper {

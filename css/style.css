@@ -481,8 +481,23 @@ div.learning div.wrapper div.boxes + p {
   div.aboutsecond div.chart p.content {
     font-size: 12px;
   }
+
+  div.learning div.wrapper p {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  div.learning div.wrapper div.boxes {
+    flex-direction: column;
+  }
+  div.learning div.wrapper div.boxes div.circle:not(:first-child) {
+    margin: 20px 0 0;
+  }
+  div.learning div.wrapper div.boxes div.circle img {
+    width: 100%;
+    max-width: 130px;
+  }
 }
-/*メディアクエリ スマホサイズ*/
+/*メディアクエリ lgサイズ*/
 @media (min-width: 1025px) {
   div.introduction div.wrapper div.aboutIcon {
     position: relative;
