@@ -463,6 +463,51 @@ div.answer div.wrapper h2 {
   font-size: 18px;
   font-weight: 600;
 }
+div.answer div.wrapper p.heading {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+div.answer div.wrapper p.heading + p.heading {
+  font-size: 14px;
+  font-weight: 300;
+}
+div.answer div.wrapper div.boxes {
+  flex-direction: column;
+}
+div.answer div.wrapper div.boxes div.box + div.box {
+  margin-top: 30px;
+}
+div.answer div.wrapper div.boxes div.box {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+}
+div.answer div.wrapper div.boxes div.box p.image {
+  border: solid 3px #ebb94d;
+  height: 250px;
+}
+div.answer div.wrapper div.boxes div.box p.image img {
+  width: 250px;
+}
+div.answer div.wrapper div.boxes div.box div.comment {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin-left: 20px;
+  padding: 20px 0;
+  color: #777;
+  font-size: 18px;
+  font-weight: 300;
+}
+div.answer div.wrapper div.boxes div.box div.comment p.customer {
+  font-style: italic;
+  text-decoration: underline;
+  border-width: 1px;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+}
 
 /*メディアクエリ タブレットサイズ*/
 @media (max-width: 767px) {
@@ -586,6 +631,50 @@ div.answer div.wrapper h2 {
 
   div.why div.wrapper div.brackets h2 {
     font-size: 14px;
+  }
+
+  div.answer div.wrapper {
+    padding: 40px 0;
+  }
+  div.answer div.wrapper h2 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  div.answer div.wrapper p.heading {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  div.answer div.wrapper p.heading + p.heading {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  div.answer div.wrapper div.boxes {
+    flex-direction: column;
+    padding: 0 50px;
+  }
+  div.answer div.wrapper div.boxes div.box + div.box {
+    margin-top: 40px;
+  }
+  div.answer div.wrapper div.boxes div.box {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+  }
+  div.answer div.wrapper div.boxes div.box p.image {
+    border: solid 3px #ebb94d;
+    height: 150px;
+    width: 150px;
+    margin: auto;
+  }
+  div.answer div.wrapper div.boxes div.box p.image img {
+    width: 150px;
+  }
+  div.answer div.wrapper div.boxes div.box div.comment {
+    padding: 0;
+    margin: 10px 0 0;
+    width: 100%;
   }
 }
 /*メディアクエリ スマホサイズ*/

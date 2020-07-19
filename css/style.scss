@@ -494,7 +494,48 @@ div.answer {
 	div.wrapper {
     padding: 40px 0;
 		h2 {
-      @include txt(18px, 600)
+      @include txt(18px, 600);
+		}
+		p.heading {
+      margin-top: 20px;
+      @include txt(14px, 600);
+    }
+    p.heading+p.heading {
+      @include txt(14px, 300);
+    }
+		div.boxes {
+      flex-direction: column;
+      div.box + div.box {
+        margin-top: 30px;
+      }
+			div.box {
+        display: flex;
+        justify-content: center;
+        text-align: left;
+        p.image {
+          border: solid 3px $colorYellow;
+          height: 250px;
+          img {
+            width: 250px;
+          }
+        }
+        div.comment {
+          display: flex;
+          flex-direction: column;
+          width: 500px;
+          margin-left: 20px;
+          padding: 20px 0;
+          color: #777;
+          @include txt(18px, 300);
+          p.customer {
+            font-style: italic;
+            text-decoration:underline;
+            border-width: 1px;
+            @include txt(14px, 300);
+            margin-top: 10px;
+          }
+        }
+      }
 		}
 	}
 }
@@ -683,6 +724,51 @@ div.answer {
       }
     }
   }
+
+  div.answer {
+    div.wrapper {
+      padding: 40px 0;
+      h2 {
+        @include txt(18px, 600);
+      }
+      p.heading {
+        margin-top: 20px;
+        @include txt(14px, 600);
+      }
+      p.heading+p.heading {
+        @include txt(14px, 300);
+      }
+      div.boxes {
+        flex-direction: column;
+        padding: 0 50px;
+
+        div.box + div.box {
+          margin-top: 40px;
+        }
+        div.box {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          text-align: left;
+          p.image {
+            border: solid 3px $colorYellow;
+            height: 150px;
+            width: 150px;
+            margin: auto;
+            img {
+              width: 150px;
+            }
+          }
+          div.comment {
+            padding:0;
+            margin: 10px 0 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  
 
 }
 
