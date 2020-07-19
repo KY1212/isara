@@ -46,8 +46,17 @@ a {
   color: inherit;
 }
 
-p.txtSmall {
-  font-size: 12px;
+.txtMin {
+  @include txt (12px,300);
+}
+.txtSmall {
+  @include txt (14px,600);
+}
+.txtMedium {
+  @include txt (16px,600);
+}
+.txtLarge {
+  @include txt (18px,600);
 }
 .txtWhite {
   color: #fff;
@@ -66,10 +75,13 @@ p.txtSmall {
   max-width:94%;
   margin: auto;
 }
-br.brPC {
+.brPC {
   display: block;
 }
-br.brSP {
+.brTAB {
+  display: none;
+}
+.brSP {
   display: none;
 }
 .brackets::before, .brackets::after {
@@ -87,6 +99,7 @@ div.brackets {
   padding: 15px 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: center;
   &:before {
     top: 0;
     left: 0;
@@ -106,6 +119,14 @@ div.brackets {
     }
 }
 
+div.yellowbox {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid $colorYellow;
+  margin: 30px auto;
+  max-width: 940px;
+}
 
 /*=====header=====*/
 header {
@@ -267,7 +288,7 @@ div.about {
 		p.txt {
       margin-top: 30px;
 		}
-		div.aboutbox {
+		div.yellowbox {
       display: flex;
       flex-direction: column;
       background-color: #fff;
@@ -362,13 +383,68 @@ div.learning {
       margin-top: 60px;
       font-weight: 600;
     }
-	}
+  }
+}
+
+div.merit {
+  background-color: #fef5e0;
+  div.wrapper {
+    div.brackets {
+      h2 {
+        padding: 0 40px;
+        @include txt (20px,600);
+      }
+      p {
+        padding: 0 40px;
+        margin-top: 10px;
+        @include txt (24px,600);
+      }
+    }
+    div.boxes {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      div.box {
+        width: 300px;
+        text-align: center;
+        img {
+          max-width: 300px;
+          width: 100%;
+        }
+        p.txtYellow {
+          @include txt (16px,600);
+        }
+        p {
+          padding: 10px 10px 0;
+          font-size: 14px;
+        }
+      }
+      div.box + div.box {
+        margin-left: 20px;
+      }
+    }
+    div.yellowbox {
+      text-align: center;
+      padding: 40px 20px;
+      p.txtYellow {
+        @include txt (24px,600);
+      }
+      p+p {
+        margin-top: 10px;
+      }
+    }
+    p.remarks {
+      padding: 0 100px;
+      font-weight: 300;
+      text-align: center;
+    }
+  }
 }
 
 
 /*メディアクエリ タブレットサイズ*/
 @include tab {
-  br.brSP {
+  .brTAB {
     display: block;
   }
 
@@ -430,7 +506,7 @@ div.learning {
           font-size: 18px;
         }
       }
-      div.aboutbox {
+      div.yellowbox {
         P.txt {
           font-size: 14px;
         }
@@ -473,11 +549,52 @@ div.learning {
     }
   }
 
+  div.merit {
+    div.wrapper {
+      div.brackets {
+        h2 {
+          @include txt (16px,600);
+        }
+        p {
+          margin-top: 10px;
+          @include txt (20px,600);
+        }
+      }
+      div.boxes {
+        flex-direction: column;
+        align-items: center;
+        div.box {
+          width: 100%;
+          p {
+            padding: 10px 10px 0;
+          }
+        }
+        div.box + div.box {
+          margin: 20px 0 0;
+        }
+      }
+      div.yellowbox {
+        text-align: center;
+        padding: 40px 20px;
+        p.txtYellow {
+          @include txt (24px,600);
+        }
+        p+p {
+          margin-top: 10px;
+        }
+      }
+      p.remarks {
+        padding: 0 10px;
+        @include txt (12px,300);
+      }
+    }
+  }
+
 }
 
 /*メディアクエリ スマホサイズ*/
 @include sp {
-  br.brSP {
+  .brSP {
     display: block;
   }
 
@@ -546,7 +663,7 @@ div.learning {
       p.txt {
         font-size: 14px;
       }
-      div.aboutbox {
+      div.yellowbox {
         P.txt {
           font-size: 14px;
         }
@@ -601,6 +718,36 @@ div.learning {
             max-width: 130px;
           }
         }
+      }
+    }
+  }
+
+  div.merit {
+    div.wrapper {
+      div.brackets {
+        h2 {
+          @include txt (14px,600);
+        }
+        p {
+          margin-top: 10px;
+          @include txt (18px,600);
+        }
+      }
+      div.boxes {
+        flex-direction: column;
+        align-items: center;
+      }
+      div.yellowbox {
+        p.txtYellow {
+          @include txt (20px,600);
+        }
+        p+p {
+          margin-top: 10px;
+        }
+      }
+      p.remarks {
+        padding: 0 10px;
+        @include txt (12px,300);
       }
     }
   }

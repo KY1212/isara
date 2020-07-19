@@ -6,8 +6,24 @@ a {
   color: inherit;
 }
 
-p.txtSmall {
+.txtMin {
   font-size: 12px;
+  font-weight: 300;
+}
+
+.txtSmall {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.txtMedium {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.txtLarge {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .txtWhite {
@@ -31,11 +47,15 @@ p.txtSmall {
   margin: auto;
 }
 
-br.brPC {
+.brPC {
   display: block;
 }
 
-br.brSP {
+.brTAB {
+  display: none;
+}
+
+.brSP {
   display: none;
 }
 
@@ -56,6 +76,7 @@ div.brackets {
   padding: 15px 0px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-align: center;
 }
 div.brackets:before {
   top: 0;
@@ -73,6 +94,15 @@ div.brackets h2 {
   font-size: 24px;
   font-weight: 600;
   padding: 0 40px;
+}
+
+div.yellowbox {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid #ebb94d;
+  margin: 30px auto;
+  max-width: 940px;
 }
 
 /*=====header=====*/
@@ -240,7 +270,7 @@ div.about div.wrapper {
 div.about div.wrapper p.txt {
   margin-top: 30px;
 }
-div.about div.wrapper div.aboutbox {
+div.about div.wrapper div.yellowbox {
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -248,23 +278,23 @@ div.about div.wrapper div.aboutbox {
   margin: 30px auto;
   max-width: 1000px;
 }
-div.about div.wrapper div.aboutbox div.boxes {
+div.about div.wrapper div.yellowbox div.boxes {
   margin: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-div.about div.wrapper div.aboutbox div.boxes div.box {
+div.about div.wrapper div.yellowbox div.boxes div.box {
   width: 128px;
 }
-div.about div.wrapper div.aboutbox div.boxes div.box p img {
+div.about div.wrapper div.yellowbox div.boxes div.box p img {
   width: auto;
   height: auto;
   max-width: 100%;
   max-height: 100%;
   height: 40px;
 }
-div.about div.wrapper div.aboutbox div.boxes div.box + div.box {
+div.about div.wrapper div.yellowbox div.boxes div.box + div.box {
   margin-left: 20px;
 }
 
@@ -336,9 +366,64 @@ div.learning div.wrapper div.boxes + p {
   font-weight: 600;
 }
 
+div.merit {
+  background-color: #fef5e0;
+}
+div.merit div.wrapper div.brackets h2 {
+  padding: 0 40px;
+  font-size: 20px;
+  font-weight: 600;
+}
+div.merit div.wrapper div.brackets p {
+  padding: 0 40px;
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+div.merit div.wrapper div.boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+div.merit div.wrapper div.boxes div.box {
+  width: 300px;
+  text-align: center;
+}
+div.merit div.wrapper div.boxes div.box img {
+  max-width: 300px;
+  width: 100%;
+}
+div.merit div.wrapper div.boxes div.box p.txtYellow {
+  font-size: 16px;
+  font-weight: 600;
+}
+div.merit div.wrapper div.boxes div.box p {
+  padding: 10px 10px 0;
+  font-size: 14px;
+}
+div.merit div.wrapper div.boxes div.box + div.box {
+  margin-left: 20px;
+}
+div.merit div.wrapper div.yellowbox {
+  text-align: center;
+  padding: 40px 20px;
+}
+div.merit div.wrapper div.yellowbox p.txtYellow {
+  font-size: 24px;
+  font-weight: 600;
+}
+div.merit div.wrapper div.yellowbox p + p {
+  margin-top: 10px;
+}
+div.merit div.wrapper p.remarks {
+  padding: 0 100px;
+  font-weight: 300;
+  text-align: center;
+}
+
 /*メディアクエリ タブレットサイズ*/
 @media (max-width: 767px) {
-  br.brSP {
+  .brTAB {
     display: block;
   }
 
@@ -372,10 +457,10 @@ div.learning div.wrapper div.boxes + p {
   div.about div.wrapper div.brackets h2 {
     font-size: 18px;
   }
-  div.about div.wrapper div.aboutbox P.txt {
+  div.about div.wrapper div.yellowbox P.txt {
     font-size: 14px;
   }
-  div.about div.wrapper div.aboutbox div.boxes div.box p img {
+  div.about div.wrapper div.yellowbox div.boxes div.box p img {
     height: 30px;
   }
 
@@ -400,10 +485,49 @@ div.learning div.wrapper div.boxes + p {
     margin-top: 20px;
     font-size: 12px;
   }
+
+  div.merit div.wrapper div.brackets h2 {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  div.merit div.wrapper div.brackets p {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+  div.merit div.wrapper div.boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.merit div.wrapper div.boxes div.box {
+    width: 100%;
+  }
+  div.merit div.wrapper div.boxes div.box p {
+    padding: 10px 10px 0;
+  }
+  div.merit div.wrapper div.boxes div.box + div.box {
+    margin: 20px 0 0;
+  }
+  div.merit div.wrapper div.yellowbox {
+    text-align: center;
+    padding: 40px 20px;
+  }
+  div.merit div.wrapper div.yellowbox p.txtYellow {
+    font-size: 24px;
+    font-weight: 600;
+  }
+  div.merit div.wrapper div.yellowbox p + p {
+    margin-top: 10px;
+  }
+  div.merit div.wrapper p.remarks {
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 300;
+  }
 }
 /*メディアクエリ スマホサイズ*/
 @media (max-width: 420px) {
-  br.brSP {
+  .brSP {
     display: block;
   }
 
@@ -456,16 +580,16 @@ div.learning div.wrapper div.boxes + p {
   div.about div.wrapper p.txt {
     font-size: 14px;
   }
-  div.about div.wrapper div.aboutbox P.txt {
+  div.about div.wrapper div.yellowbox P.txt {
     font-size: 14px;
   }
-  div.about div.wrapper div.aboutbox div.boxes {
+  div.about div.wrapper div.yellowbox div.boxes {
     flex-direction: column;
   }
-  div.about div.wrapper div.aboutbox div.boxes div.box + div.box {
+  div.about div.wrapper div.yellowbox div.boxes div.box + div.box {
     margin: 20px 0 0;
   }
-  div.about div.wrapper div.aboutbox div.boxes div.box + div.box p img {
+  div.about div.wrapper div.yellowbox div.boxes div.box + div.box p img {
     height: 30px;
   }
 
@@ -495,6 +619,32 @@ div.learning div.wrapper div.boxes + p {
   div.learning div.wrapper div.boxes div.circle img {
     width: 100%;
     max-width: 130px;
+  }
+
+  div.merit div.wrapper div.brackets h2 {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  div.merit div.wrapper div.brackets p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  div.merit div.wrapper div.boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.merit div.wrapper div.yellowbox p.txtYellow {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  div.merit div.wrapper div.yellowbox p + p {
+    margin-top: 10px;
+  }
+  div.merit div.wrapper p.remarks {
+    padding: 0 10px;
+    font-size: 12px;
+    font-weight: 300;
   }
 }
 /*メディアクエリ lgサイズ*/
