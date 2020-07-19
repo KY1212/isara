@@ -1,0 +1,506 @@
+@charset "UTF-8";
+/*=====変数=====*/
+/*=====グローバル=====*/
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p.txtSmall {
+  font-size: 12px;
+}
+
+.txtWhite {
+  color: #fff;
+}
+
+.txtYellow {
+  color: #ebb94d;
+}
+
+.btn {
+  background-color: #da6b64;
+  border-radius: 25px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.wrapper {
+  padding: 20px 0;
+  max-width: 94%;
+  margin: auto;
+}
+
+br.brPC {
+  display: block;
+}
+
+br.brSP {
+  display: none;
+}
+
+.brackets::before, .brackets::after {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  content: "";
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+div.brackets {
+  margin: 0 auto;
+  position: relative;
+  width: 860px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+div.brackets:before {
+  top: 0;
+  left: 0;
+  border-top: 4px solid #ebb94d;
+  border-left: 4px solid #ebb94d;
+}
+div.brackets:after {
+  bottom: 0;
+  right: 0;
+  border-bottom: 4px solid #ebb94d;
+  border-right: 4px solid #ebb94d;
+}
+div.brackets h2 {
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0 40px;
+}
+
+/*=====header=====*/
+header div.wrapper {
+  width: 100%;
+  height: 35px;
+  position: relative;
+  display: flex;
+}
+header div.wrapper div.logoWrap {
+  display: flex;
+  align-items: center;
+}
+header div.wrapper div.logoWrap div.logo {
+  height: 44px;
+}
+header div.wrapper div.logoWrap div.logo img {
+  width: 128px;
+}
+header div.wrapper div.logoWrap p.subTitle {
+  font-size: 14px;
+  font-weight: 600;
+  position: relative;
+  bottom: -10px;
+}
+header div.wrapper div.contactWrap div.contactPC {
+  font-size: 14px;
+  font-weight: 300;
+  display: block;
+  position: absolute;
+  right: 0px;
+  top: 16px;
+  padding: 11px 40px;
+}
+header div.wrapper div.contactWrap div.contactSP {
+  display: none;
+}
+
+/*ヒーローイメージ*/
+div.hero {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/sky.jpg);
+}
+div.hero div.wrapper {
+  text-align: center;
+  padding: 50px 0;
+}
+div.hero div.wrapper div.mainLogo {
+  margin-top: 20px;
+}
+div.hero div.wrapper div.mainLogo img {
+  max-width: 371px;
+  width: 94%;
+  margin: auto;
+}
+div.hero div.wrapper div.mainLogo + p.txt {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+/*conversion*/
+div.conversion {
+  background-color: #ebb94d;
+}
+div.conversion div.wrapper {
+  width: 906px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 0;
+}
+div.conversion div.wrapper p.txt {
+  font-size: 16px;
+  font-weight: 600;
+}
+div.conversion div.wrapper p:not(:first-child) {
+  margin-top: 20px;
+}
+div.conversion div.wrapper p:not(:first-child) code {
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: 600;
+}
+div.conversion div.wrapper div.btn.contactPC {
+  max-width: 806px;
+  margin: 10px auto 0;
+  padding: 25px 50px;
+  border-radius: 9999px;
+  font-weight: 600;
+}
+div.conversion div.wrapper div.currently ul {
+  margin-top: 20px;
+}
+div.conversion div.wrapper div.currently ul li {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+div.conversion div.wrapper div.sns {
+  margin-top: 20px;
+}
+div.conversion div.wrapper div.sns ul {
+  display: flex;
+  justify-content: center;
+}
+div.conversion div.wrapper div.sns ul li {
+  line-height: 0;
+  margin-left: 5px;
+}
+
+div.introduction {
+  background-size: cover;
+  background-position: bottom;
+  background-image: url(../img/road.PNG);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+div.introduction div.wrapper {
+  text-align: center;
+  padding: 50px 0 0 0;
+  max-width: 100%;
+}
+div.introduction div.wrapper div.txt {
+  font-size: 16px;
+  font-weight: 300;
+  margin: 30px 30px 0;
+  height: 340px;
+}
+div.introduction div.wrapper div.txt p + p {
+  margin-top: 24px;
+}
+div.introduction div.wrapper div.txt p + p span.underLine {
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, transparent), color-stop(70%, #ebb94d));
+  background: linear-gradient(transparent 70%, #ebb94d 70%);
+}
+div.introduction div.wrapper div.aboutIcon {
+  position: relative;
+  top: 40px;
+}
+div.introduction div.wrapper div.aboutIcon p.circleAbout {
+  width: 80px;
+  height: 80px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #fff;
+  background-color: #ebb94d;
+  padding: 0;
+  margin: 0;
+  line-height: 80px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+div.about {
+  background-color: #fef5e0;
+  text-align: center;
+}
+div.about div.wrapper {
+  padding: 90px 0 60px;
+}
+div.about div.wrapper p.txt {
+  margin-top: 30px;
+}
+div.about div.wrapper div.aboutbox {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border: 2px solid #ebb94d;
+  margin: 30px auto;
+  max-width: 1000px;
+}
+div.about div.wrapper div.aboutbox div.boxes {
+  margin: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+div.about div.wrapper div.aboutbox div.boxes div.box {
+  width: 128px;
+}
+div.about div.wrapper div.aboutbox div.boxes div.box p img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  height: 40px;
+}
+div.about div.wrapper div.aboutbox div.boxes div.box + div.box {
+  margin-left: 20px;
+}
+
+div.aboutsecond {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/night.jpg);
+  text-align: center;
+}
+div.aboutsecond div.wrapper h2.txt {
+  font-size: 24px;
+}
+div.aboutsecond div.wrapper p.txtWhite {
+  font-size: 16px;
+  font-weight: 600;
+}
+div.aboutsecond div.wrapper p:nth-child(2).txtWhite {
+  margin-top: 30px;
+}
+div.aboutsecond div.chart {
+  max-width: 520px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px;
+}
+div.aboutsecond div.chart p.step {
+  font-size: 14px;
+  font-weight: 600;
+  background-color: #ebb94d;
+  border-radius: 5px;
+}
+div.aboutsecond div.chart p.content {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #333;
+  line-height: 2;
+}
+
+div.aboutthird {
+  background-color: #016ea9;
+  text-align: center;
+}
+div.aboutthird p.txtSmall {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+div.learning {
+  text-align: center;
+}
+div.learning div.wrapper {
+  padding: 60px 0;
+}
+div.learning div.wrapper div.boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+div.learning div.wrapper div.boxes div.circle:not(:first-child) {
+  margin-left: 40px;
+}
+div.learning div.wrapper div.boxes div.circle img {
+  width: 100%;
+}
+div.learning div.wrapper div.boxes + p {
+  margin-top: 60px;
+  font-weight: 600;
+}
+
+/*メディアクエリ タブレットサイズ*/
+@media (max-width: 767px) {
+  br.brSP {
+    display: block;
+  }
+
+  header div.wrapper div.logoWrap p.subTitle {
+    font-size: 10px;
+  }
+  header div.wrapper div.contactWrap {
+    width: auto;
+  }
+  header div.wrapper div.contactWrap div.contactPC a {
+    font-size: 12px;
+  }
+
+  div.conversion div.wrapper p:not(:first-child) code {
+    font-size: 12px;
+  }
+  div.conversion div.wrapper div.currently ul li {
+    font-size: 14px;
+  }
+
+  div.introduction div.wrapper div.brackets h2 {
+    font-size: 18px;
+  }
+  div.introduction div.wrapper div.txt {
+    height: 430px;
+  }
+  div.introduction div.wrapper div.txt p {
+    font-size: 15px;
+  }
+
+  div.about div.wrapper div.brackets h2 {
+    font-size: 18px;
+  }
+  div.about div.wrapper div.aboutbox P.txt {
+    font-size: 14px;
+  }
+  div.about div.wrapper div.aboutbox div.boxes div.box p img {
+    height: 30px;
+  }
+
+  div.aboutsecond div.wrapper h2.txt {
+    font-size: 18px;
+  }
+  div.aboutsecond div.wrapper p.txtWhite {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  div.aboutsecond div.wrapper p.txtWhite + p.txtWhite {
+    margin-top: 10px;
+  }
+  div.aboutsecond div.chart {
+    padding: 20px;
+  }
+  div.aboutsecond div.chart p.step {
+    font-size: 14px;
+    margin-top: 0;
+  }
+  div.aboutsecond div.chart p.content {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+}
+/*メディアクエリ スマホサイズ*/
+@media (max-width: 420px) {
+  br.brSP {
+    display: block;
+  }
+
+  header div.wrapper {
+    max-width: 100%;
+    height: 61px;
+    padding: 0;
+    align-items: flex-start;
+  }
+  header div.wrapper div.logoWrap {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    padding: 10px 5px;
+  }
+  header div.wrapper div.logoWrap div.logo {
+    height: 31px;
+  }
+  header div.wrapper div.logoWrap div.logo img {
+    width: 90px;
+  }
+  header div.wrapper div.logoWrap p.subTitle {
+    bottom: 0;
+  }
+  header div.wrapper div.contactWrap div.contactPC {
+    display: none;
+  }
+  header div.wrapper div.contactWrap div.contactSP {
+    position: absolute;
+    right: 0px;
+    padding: 9px 11px;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  header div.wrapper div.contactWrap div.contactSP img {
+    width: 20px;
+    margin: auto;
+  }
+  header div.wrapper div.contactWrap div.contactSP a {
+    font-size: 12px;
+  }
+
+  div.conversion div.wrapper div.currently ul li {
+    font-size: 12px;
+  }
+
+  div.about div.wrapper div.brackets h2 {
+    font-size: 16px;
+  }
+  div.about div.wrapper p.txt {
+    font-size: 14px;
+  }
+  div.about div.wrapper div.aboutbox P.txt {
+    font-size: 14px;
+  }
+  div.about div.wrapper div.aboutbox div.boxes {
+    flex-direction: column;
+  }
+  div.about div.wrapper div.aboutbox div.boxes div.box + div.box {
+    margin: 20px 0 0;
+  }
+  div.about div.wrapper div.aboutbox div.boxes div.box + div.box p img {
+    height: 30px;
+  }
+
+  div.aboutsecond div.wrapper h2.txt {
+    font-size: 16px;
+  }
+  div.aboutsecond div.wrapper p.txtWhite {
+    font-size: 12px;
+  }
+  div.aboutsecond div.chart p.step {
+    font-size: 12px;
+  }
+  div.aboutsecond div.chart p.content {
+    font-size: 12px;
+  }
+}
+/*メディアクエリ スマホサイズ*/
+@media (min-width: 1025px) {
+  div.introduction div.wrapper div.aboutIcon {
+    position: relative;
+    top: 60px;
+  }
+  div.introduction div.wrapper div.aboutIcon p.circleAbout {
+    width: 120px;
+    height: 120px;
+    color: #fff;
+    background-color: #ebb94d;
+    padding: 0;
+    margin: 0;
+    line-height: 120px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    font-size: 14px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
