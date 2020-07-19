@@ -58,6 +58,10 @@ a {
 .txtLarge {
   @include txt (18px,600);
 }
+.txtMax {
+  @include txt (24px,600);
+}
+
 .txtWhite {
   color: #fff;
 }
@@ -74,6 +78,7 @@ a {
   padding: 20px 0;
   max-width:94%;
   margin: auto;
+  text-align: center;
 }
 .brPC {
   display: block;
@@ -125,7 +130,14 @@ div.yellowbox {
   background-color: #fff;
   border: 2px solid $colorYellow;
   margin: 30px auto;
-  max-width: 940px;
+  padding: 30px;
+  text-align: center;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 /*=====header=====*/
@@ -170,7 +182,6 @@ div.hero {
   @include bgImg (center);
   background-image: url(../img/sky.jpg);
 	div.wrapper {
-    text-align: center;
     padding: 50px 0;
 		div.mainLogo {
       margin-top: 20px;
@@ -180,10 +191,6 @@ div.hero {
         margin: auto;
       }
     }
-    div.mainLogo + p.txt {
-      margin-top: 20px;
-      font-size: 14px;
-		}
 	}
 }
 
@@ -193,7 +200,6 @@ div.conversion {
 	div.wrapper {
     width: 906px;
     margin: auto;
-    text-align: center;
     padding: 40px 0;
 		p.txt {
       @include txt (16px,600);
@@ -245,7 +251,6 @@ div.introduction {
 	background-repeat: no-repeat;
 
   div.wrapper {
-    text-align: center;
     padding: 50px 0 0 0;
     max-width: 100%;
     div.txt {
@@ -285,20 +290,8 @@ div.about {
   text-align: center;
 	div.wrapper {
     padding: 90px 0 60px;
-		p.txt {
-      margin-top: 30px;
-		}
 		div.yellowbox {
-      display: flex;
-      flex-direction: column;
-      background-color: #fff;
-      border: 2px solid $colorYellow;
-      margin: 30px auto;
-      max-width: 1000px;
       div.boxes {
-        margin: 30px;
-        display: flex;
-        justify-content: center;
         align-items: center;
         div.box {
           width: 128px;
@@ -322,7 +315,6 @@ div.about {
 div.aboutsecond {
   @include bgImg (center);
   background-image: url(../img/night.jpg);
-  text-align: center;
 	div.wrapper {
 		h2.txt {
       font-size: 24px;
@@ -363,12 +355,9 @@ div.aboutthird {
 }
 
 div.learning {
-  text-align: center;
 	div.wrapper {
     padding: 60px 0;
 		div.boxes {
-      display: flex;
-      justify-content: center;
       margin-top: 60px;
 			div.circle:not(:first-child) {
         margin-left: 40px;
@@ -401,12 +390,8 @@ div.merit {
       }
     }
     div.boxes {
-      display: flex;
-      justify-content: center;
-      margin-top: 30px;
       div.box {
         width: 300px;
-        text-align: center;
         img {
           max-width: 300px;
           width: 100%;
@@ -424,8 +409,6 @@ div.merit {
       }
     }
     div.yellowbox {
-      text-align: center;
-      padding: 40px 20px;
       p.txtYellow {
         @include txt (24px,600);
       }
@@ -439,6 +422,81 @@ div.merit {
       text-align: center;
     }
   }
+}
+
+div.teacher {
+  @include bgImg (center);
+  background-image: url(../img/sunset.jpg);
+  color: #fff;
+  div.wrapper {
+    padding: 60px 0;
+		p.txtSmall {
+      margin-top: 30px;
+    }
+		div.boxes {
+      margin: 190px auto 0;
+			div.box {
+        max-width: 289px;
+        border: solid 3px #fff;
+        padding: 40px;
+				div.circleImg {
+          position: relative;
+          bottom: 200px;
+          height: 40px;
+					img {
+            width: 100%;
+            max-width: 200px;
+					}
+				}
+				p {
+          @include txt (14px,300);
+          line-height: 1.6;
+        }
+        p + p {
+          margin-top: 15px;
+        }
+      }
+      div.box + div.box {
+        margin-left: 30px;
+      }
+		}
+	}
+}
+
+div.why {
+  background-color: $colorYellow;
+  color: #fff;
+  &:after {
+    content: " ";
+    height: 0;
+    position: absolute;
+    width: 0;
+    border: 25px solid transparent;
+    border-top-color: #ebb94d;
+    left: 50%;
+    margin-left: -25px;
+  }
+	div.wrapper {
+		div.Qicon {
+			img {
+			}
+		}
+		div.brackets {
+      &:before,
+      &:after {
+        border-color: #fff;
+      }
+		}
+	}
+}
+
+div.answer {
+	div.wrapper {
+    padding: 40px 0;
+		h2 {
+      @include txt(18px, 600)
+		}
+	}
 }
 
 
@@ -574,8 +632,6 @@ div.merit {
         }
       }
       div.yellowbox {
-        text-align: center;
-        padding: 40px 20px;
         p.txtYellow {
           @include txt (24px,600);
         }
@@ -586,6 +642,44 @@ div.merit {
       p.remarks {
         padding: 0 10px;
         @include txt (12px,300);
+      }
+    }
+  }
+
+  div.teacher {
+    div.wrapper {
+      div.boxes {
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        div.box {
+          margin-top: 170px;
+          padding: 0 40px 40px;
+          max-width: 100%;
+          div.circleImg {
+            bottom: 100px;
+            img {
+              width: 120px;
+            }
+          }
+          p {
+          }
+          p + p {
+          }
+        }
+        div.box + div.box {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  div.why {
+    div.wrapper {
+      div.brackets {
+        h2 {
+          font-size: 14px;
+        }
       }
     }
   }
@@ -768,7 +862,6 @@ div.merit {
           padding: 0;
           margin: 0;
           line-height: 120px;
-          text-align: center;
           display: inline-block;
           border-radius: 50%;
           font-size: 14px;

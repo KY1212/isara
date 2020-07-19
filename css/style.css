@@ -26,6 +26,11 @@ a {
   font-weight: 600;
 }
 
+.txtMax {
+  font-size: 24px;
+  font-weight: 600;
+}
+
 .txtWhite {
   color: #fff;
 }
@@ -45,6 +50,7 @@ a {
   padding: 20px 0;
   max-width: 94%;
   margin: auto;
+  text-align: center;
 }
 
 .brPC {
@@ -102,7 +108,14 @@ div.yellowbox {
   background-color: #fff;
   border: 2px solid #ebb94d;
   margin: 30px auto;
-  max-width: 940px;
+  padding: 30px;
+  text-align: center;
+}
+
+.boxes {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 
 /*=====header=====*/
@@ -148,7 +161,6 @@ div.hero {
   background-image: url(../img/sky.jpg);
 }
 div.hero div.wrapper {
-  text-align: center;
   padding: 50px 0;
 }
 div.hero div.wrapper div.mainLogo {
@@ -159,10 +171,6 @@ div.hero div.wrapper div.mainLogo img {
   width: 94%;
   margin: auto;
 }
-div.hero div.wrapper div.mainLogo + p.txt {
-  margin-top: 20px;
-  font-size: 14px;
-}
 
 /*conversion*/
 div.conversion {
@@ -171,7 +179,6 @@ div.conversion {
 div.conversion div.wrapper {
   width: 906px;
   margin: auto;
-  text-align: center;
   padding: 40px 0;
 }
 div.conversion div.wrapper p.txt {
@@ -223,7 +230,6 @@ div.introduction {
   background-repeat: no-repeat;
 }
 div.introduction div.wrapper {
-  text-align: center;
   padding: 50px 0 0 0;
   max-width: 100%;
 }
@@ -267,21 +273,7 @@ div.about {
 div.about div.wrapper {
   padding: 90px 0 60px;
 }
-div.about div.wrapper p.txt {
-  margin-top: 30px;
-}
-div.about div.wrapper div.yellowbox {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  border: 2px solid #ebb94d;
-  margin: 30px auto;
-  max-width: 1000px;
-}
 div.about div.wrapper div.yellowbox div.boxes {
-  margin: 30px;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
 div.about div.wrapper div.yellowbox div.boxes div.box {
@@ -302,7 +294,6 @@ div.aboutsecond {
   background-size: cover;
   background-position: center;
   background-image: url(../img/night.jpg);
-  text-align: center;
 }
 div.aboutsecond div.wrapper h2.txt {
   font-size: 24px;
@@ -344,15 +335,10 @@ div.aboutthird p.txtSmall {
   font-weight: 600;
 }
 
-div.learning {
-  text-align: center;
-}
 div.learning div.wrapper {
   padding: 60px 0;
 }
 div.learning div.wrapper div.boxes {
-  display: flex;
-  justify-content: center;
   margin-top: 60px;
 }
 div.learning div.wrapper div.boxes div.circle:not(:first-child) {
@@ -380,14 +366,8 @@ div.merit div.wrapper div.brackets p {
   font-size: 24px;
   font-weight: 600;
 }
-div.merit div.wrapper div.boxes {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-}
 div.merit div.wrapper div.boxes div.box {
   width: 300px;
-  text-align: center;
 }
 div.merit div.wrapper div.boxes div.box img {
   max-width: 300px;
@@ -404,10 +384,6 @@ div.merit div.wrapper div.boxes div.box p {
 div.merit div.wrapper div.boxes div.box + div.box {
   margin-left: 20px;
 }
-div.merit div.wrapper div.yellowbox {
-  text-align: center;
-  padding: 40px 20px;
-}
 div.merit div.wrapper div.yellowbox p.txtYellow {
   font-size: 24px;
   font-weight: 600;
@@ -419,6 +395,73 @@ div.merit div.wrapper p.remarks {
   padding: 0 100px;
   font-weight: 300;
   text-align: center;
+}
+
+div.teacher {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/sunset.jpg);
+  color: #fff;
+}
+div.teacher div.wrapper {
+  padding: 60px 0;
+}
+div.teacher div.wrapper p.txtSmall {
+  margin-top: 30px;
+}
+div.teacher div.wrapper div.boxes {
+  margin: 190px auto 0;
+}
+div.teacher div.wrapper div.boxes div.box {
+  max-width: 289px;
+  border: solid 3px #fff;
+  padding: 40px;
+}
+div.teacher div.wrapper div.boxes div.box div.circleImg {
+  position: relative;
+  bottom: 200px;
+  height: 40px;
+}
+div.teacher div.wrapper div.boxes div.box div.circleImg img {
+  width: 100%;
+  max-width: 200px;
+}
+div.teacher div.wrapper div.boxes div.box p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+div.teacher div.wrapper div.boxes div.box p + p {
+  margin-top: 15px;
+}
+div.teacher div.wrapper div.boxes div.box + div.box {
+  margin-left: 30px;
+}
+
+div.why {
+  background-color: #ebb94d;
+  color: #fff;
+}
+div.why:after {
+  content: " ";
+  height: 0;
+  position: absolute;
+  width: 0;
+  border: 25px solid transparent;
+  border-top-color: #ebb94d;
+  left: 50%;
+  margin-left: -25px;
+}
+div.why div.wrapper div.brackets:before, div.why div.wrapper div.brackets:after {
+  border-color: #fff;
+}
+
+div.answer div.wrapper {
+  padding: 40px 0;
+}
+div.answer div.wrapper h2 {
+  font-size: 18px;
+  font-weight: 600;
 }
 
 /*メディアクエリ タブレットサイズ*/
@@ -508,10 +551,6 @@ div.merit div.wrapper p.remarks {
   div.merit div.wrapper div.boxes div.box + div.box {
     margin: 20px 0 0;
   }
-  div.merit div.wrapper div.yellowbox {
-    text-align: center;
-    padding: 40px 20px;
-  }
   div.merit div.wrapper div.yellowbox p.txtYellow {
     font-size: 24px;
     font-weight: 600;
@@ -523,6 +562,30 @@ div.merit div.wrapper p.remarks {
     padding: 0 10px;
     font-size: 12px;
     font-weight: 300;
+  }
+
+  div.teacher div.wrapper div.boxes {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  }
+  div.teacher div.wrapper div.boxes div.box {
+    margin-top: 170px;
+    padding: 0 40px 40px;
+    max-width: 100%;
+  }
+  div.teacher div.wrapper div.boxes div.box div.circleImg {
+    bottom: 100px;
+  }
+  div.teacher div.wrapper div.boxes div.box div.circleImg img {
+    width: 120px;
+  }
+  div.teacher div.wrapper div.boxes div.box + div.box {
+    margin-left: 0;
+  }
+
+  div.why div.wrapper div.brackets h2 {
+    font-size: 14px;
   }
 }
 /*メディアクエリ スマホサイズ*/
@@ -661,7 +724,6 @@ div.merit div.wrapper p.remarks {
     padding: 0;
     margin: 0;
     line-height: 120px;
-    text-align: center;
     display: inline-block;
     border-radius: 50%;
     font-size: 14px;
