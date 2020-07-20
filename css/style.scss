@@ -51,6 +51,9 @@ a {
 .txtMin {
   @include txt (12px,300);
 }
+.txtMinBold {
+  @include txt (12px,600);
+}
 .txtSmall {
   @include txt (14px,600);
 }
@@ -922,12 +925,41 @@ div.flow {
         display: block;
         div.box {
           background-color: $paleYellow;
-          text-align: center;
-          p.headingFlow {
+          padding: 10px;
+          margin-top: 5px;
+          div.heading {
+            display: flex;
+            justify-content: space-between;
+            div.headingleft {
+              display: flex;
+              align-items: center;
+              img {
+                width: 35px;
+              }
+              p.headingFlow.txtSmall {
+                margin-left: 10px;
+              }
+            }
+            i.fas.fa-angle-up {
+              padding-top: 5px;
+            }
           }
-          p.txtMin {
+
+          div.contents {
+            display: none;
+            p.txtMin {
+              margin-top: 20px;
+              text-align: left;
+            }
+          }
+          div.contents.active {
+            display: block;
+          }
+          .box p:not(:first-child) {
             margin-top: 10px;
+            text-align: left;
           }
+
         }
       }
     }

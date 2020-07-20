@@ -11,6 +11,11 @@ a {
   font-weight: 300;
 }
 
+.txtMinBold {
+  font-size: 12px;
+  font-weight: 600;
+}
+
 .txtSmall {
   font-size: 14px;
   font-weight: 600;
@@ -819,10 +824,39 @@ div.flow div.boxesTab {
   }
   div.flow div.wrapper div.boxesTab div.box {
     background-color: #fef5e0;
-    text-align: center;
+    padding: 10px;
+    margin-top: 5px;
   }
-  div.flow div.wrapper div.boxesTab div.box p.txtMin {
+  div.flow div.wrapper div.boxesTab div.box div.heading {
+    display: flex;
+    justify-content: space-between;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.heading div.headingleft {
+    display: flex;
+    align-items: center;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.heading div.headingleft img {
+    width: 35px;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.heading div.headingleft p.headingFlow.txtSmall {
+    margin-left: 10px;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.heading i.fas.fa-angle-up {
+    padding-top: 5px;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.contents {
+    display: none;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.contents p.txtMin {
+    margin-top: 20px;
+    text-align: left;
+  }
+  div.flow div.wrapper div.boxesTab div.box div.contents.active {
+    display: block;
+  }
+  div.flow div.wrapper div.boxesTab div.box .box p:not(:first-child) {
     margin-top: 10px;
+    text-align: left;
   }
 }
 /*メディアクエリ スマホサイズ*/
