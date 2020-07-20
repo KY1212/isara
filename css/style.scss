@@ -1,6 +1,8 @@
 
 /*=====変数=====*/
 $colorYellow: #ebb94d;
+$paleYellow: #fef5e0;
+$colorBlue: #016ea9;
 
 $lg: 1025px; //大きいモニター
 $pc: 1024px; // PC
@@ -73,6 +75,10 @@ a {
   border-radius: 25px;
   cursor: pointer;
   color: #fff;
+}
+.image {
+  height: auto;
+  vertical-align: bottom;
 }
 .wrapper {
   padding: 20px 0;
@@ -347,7 +353,7 @@ div.aboutsecond {
 }
 
 div.aboutthird {
-  background-color: #016ea9;
+  background-color: $colorBlue;
   text-align: center;
 	p.txtSmall {
     @include txt (14px,600);
@@ -540,6 +546,103 @@ div.answer {
 	}
 }
 
+div.class {
+  @include bgImg (center);
+  background-image: url(../img/freelance.PNG);
+	div.wrapper {
+    padding: 60px 0;
+		h2.txtMax.txtWhite {
+		}
+		p.txtWhite {
+      @include txt(14px, 600);
+
+		}
+		div.boxes {
+      align-items: flex-start;
+      div.box + div.box {
+        margin-left: 20px;
+      }
+			div.box {
+        background-color: $colorBlue;
+        border-radius: 5px;
+        border: solid 2px $colorBlue;
+        width: 255px;
+				p {
+          color: #fff;
+          @include txt(16px, 600);
+          padding: 15px 0;
+				}
+				ul {
+          background-color: #fff;
+          padding: 10px;
+          li + li {
+            margin-top: 10px;
+          }
+          li:not(:last-child) {
+            border-bottom: solid 1px #e5e5e5;
+            padding-bottom: 10px;
+          }
+          li {
+            @include txt(14px, 600);
+					}
+				}
+			}
+		}
+	}
+}
+
+div.flow {
+	div.wrapper {
+		h2.txtMax {
+		}
+		p.circleImage {
+      margin: 30px 0;
+			img {
+        width: 100%;
+        max-width: 700px;
+			}
+		}
+		div.flowbox {
+      display: flex;
+      justify-content: center;
+      background-color: $paleYellow;
+      border-radius: 5px;
+      padding: 35px;
+      margin: auto;
+			div.flowleft {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+				p.image {
+					img {
+            width: 98px;
+					}
+				}
+			}
+			div.flowright {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        margin-left: 20px;
+        text-align: left;
+        p {
+          margin-top: 20px;
+        }
+			}
+    }
+    p.flowLine {
+      line-height: 0;
+      img {
+        width: calc(100% - 300px);
+      }
+    }
+  }
+  div.boxesTab {
+    display: none;
+  }
+}
+
 
 /*メディアクエリ タブレットサイズ*/
 @include tab {
@@ -703,10 +806,6 @@ div.answer {
               width: 120px;
             }
           }
-          p {
-          }
-          p + p {
-          }
         }
         div.box + div.box {
           margin-left: 0;
@@ -768,7 +867,71 @@ div.answer {
       }
     }
   }
+
+  div.class {
+    div.wrapper {
+      h2.txtMax.txtWhite {
+      }
+      p.txtWhite {
+        @include txt(14px, 600);
   
+      }
+      div.boxes {
+        flex-direction: column;
+        div.box + div.box {
+          margin: 30px auto;
+        }
+        div.box {
+          width: 100%;
+          max-width: 600px;
+          margin: auto;
+          p {
+            color: #fff;
+            @include txt(16px, 600);
+            padding: 15px 0;
+          }
+          ul {
+            background-color: #fff;
+            padding: 10px;
+            li + li {
+              margin-top: 10px;
+            }
+            li:not(:last-child) {
+            }
+            li {
+              @include txt(14px, 600);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div.flow {
+    div.wrapper {
+      h2.txtMax {
+        display: none;
+      }
+      div.flowbox {
+        display: none;
+      }
+      p.flowLine {
+        display: none;
+      }
+      div.boxesTab {
+        display: block;
+        div.box {
+          background-color: $paleYellow;
+          text-align: center;
+          p.headingFlow {
+          }
+          p.txtMin {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
 
 }
 
