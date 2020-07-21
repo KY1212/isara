@@ -43,6 +43,7 @@ $sp: 420px;  // スマホ
 }
 
 /*=====グローバル=====*/
+
 a {
   text-decoration: none;
   color: inherit;
@@ -71,7 +72,7 @@ a {
   color: #fff;
 }
 .txtYellow {
-  color: #ebb94d;
+  color: $colorYellow;
 }
 .btn {
   background-color: #da6b64;
@@ -189,7 +190,7 @@ header {
 /*ヒーローイメージ*/
 div.hero {
   @include bgImg (center);
-  background-image: url(../img/sky.jpg);
+  background-image: url(../img/main.jpg);
 	div.wrapper {
     padding: 50px 0;
 		div.mainLogo {
@@ -343,7 +344,7 @@ div.aboutsecond {
     padding: 30px;
 		p.step {
       @include txt (14px,600);
-      background-color: #ebb94d;
+      background-color: $colorYellow;
       border-radius: 5px;
     }
     p.content {
@@ -481,7 +482,7 @@ div.why {
     position: absolute;
     width: 0;
     border: 25px solid transparent;
-    border-top-color: #ebb94d;
+    border-top-color: $colorYellow;
     left: 50%;
     margin-left: -25px;
   }
@@ -646,11 +647,162 @@ div.flow {
   }
 }
 
+div.bangkok {
+  @include bgImg (center);
+  background-image: url(../img/guia.jpg);
+  color: #fff;
+  position: relative;
+  &:before {
+    content: '';
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+	div.wrapper {
+    width: 80%;
+    padding: 50px;
+    // height: 500px;
+    position: relative;
+    z-index: 1;
+		h2.txtMax.txtWhite {
+      text-align: left;
+		}
+		p.txtMin {
+      text-align: left;
+      margin-top: 30px;
+		}
+		ul {
+      margin-top: 30px;
+      list-style-type: disc;
+      list-style-position: inside;
+			li {
+        text-align: left;
+        @include txt(14px, 600);
+        line-height: 2;
+			}
+		}
+		p.txtMedium {
+      text-align: left;
+      margin-top: 30px;
+		}
+	}
+}
+
+div.special {
+  background-color: $colorYellow;
+	div.wrapper {
+    padding: 60px 0;
+		p.txtSmall {
+      margin-top: 30px;
+			span.txtWhite {
+			}
+    }
+    p.specialpeople.txtMax {
+      position: relative;
+      top: 40px;
+      background-color: $colorYellow;
+      width: 300px;
+      margin: auto;
+      padding: 0 50px;
+    }
+    div.boxes {
+      border: solid 3px #fff;
+      padding: 60px 50px 50px;
+      max-width: 850px;
+      margin: auto;
+      div.circle {
+        background-color: #fff;
+        border-radius: 50%;
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        p.txtSmall {
+          width: 220px;
+          margin: 10px auto;
+        }
+      }
+      div.circle + div.circle {
+        margin-left: 60px;
+      }
+    }
+    div.boxesSP {
+      display: none;
+    }
+	}
+}
+
+div.specialdetail {
+  @include bgImg (center);
+  background-image: url(../img/normad.jpg);
+  color: #fff;
+  position: relative;
+  &:before {
+    content: '';
+    background-color: rgba(0,0,0,.2);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+	div.wrapper {
+    padding: 60px 0;
+    position: relative;
+		.txtLarge {
+      margin-top: 30px;
+		}
+		div.brackets {
+      margin-top: 30px;
+      &:before,
+      &:after {
+        border-color: #fff;
+      }
+		}
+	}
+}
+
+div.message {
+	div.wrapper {
+    padding: 60px 0;
+    width: 85%;
+		p.txtLarge {
+      margin-top: 30px;
+		}
+		div.boxes {
+			p {
+				img {
+          width: 224px;
+          height: 168px;
+				}
+			}
+			div.txtWrap {
+        text-align: left;
+        margin-left: 30px;
+				p + p {
+          @include txt (14px,300);
+          margin-top: 10px;
+				}
+				ul {
+          list-style-type: disc;
+          list-style-position: inside;
+          margin: 30px 0;
+					li {
+            @include txt (14px,300);
+					}
+				}
+			}
+		}
+	}
+}
 
 /*メディアクエリ タブレットサイズ*/
 @include tab {
   .brTAB {
     display: block;
+  }
+  .brPC {
+    display: none;
   }
 
   header {
@@ -873,11 +1025,8 @@ div.flow {
 
   div.class {
     div.wrapper {
-      h2.txtMax.txtWhite {
-      }
       p.txtWhite {
         @include txt(14px, 600);
-  
       }
       div.boxes {
         flex-direction: column;
@@ -898,8 +1047,6 @@ div.flow {
             padding: 10px;
             li + li {
               margin-top: 10px;
-            }
-            li:not(:last-child) {
             }
             li {
               @include txt(14px, 600);
@@ -944,7 +1091,6 @@ div.flow {
               padding-top: 5px;
             }
           }
-
           div.contents {
             display: none;
             p.txtMin {
@@ -959,7 +1105,62 @@ div.flow {
             margin-top: 10px;
             text-align: left;
           }
+        }
+      }
+    }
+  }
 
+  div.special {
+    div.wrapper {
+      div.boxes {
+        flex-direction: column;
+        align-items: center;
+        div.circle + div.circle {
+          margin: 50px 0 0;
+        }
+      }
+    }
+  }
+
+  div.specialdetail {
+    div.wrapper {
+      h2.txtMax {
+        @include txt (20px,600);
+      }
+      p.txtLarge {
+        @include txt (14px,600);
+      }
+    }
+  }
+
+  div.message {
+    div.wrapper {
+      width: 90%;
+      div.boxes {
+        flex-direction: column;
+        p {
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+        div.txtWrap {
+          text-align: left;
+          margin-left: 0;
+          p + p {
+            margin-top: 10px;
+          }
+          p {
+            @include txt (14px,300);
+          }
+          ul {
+            list-style-type: disc;
+            list-style-position: inside;
+            margin: 30px 0;
+            li {
+              @include txt (14px,300);
+            }
+          }
         }
       }
     }
@@ -967,11 +1168,16 @@ div.flow {
 
 }
 
+
+
 /*メディアクエリ スマホサイズ*/
 @include sp {
   .brSP {
     display: block;
   }
+  .brPC {
+  display: none;
+}
 
   header {
     div.wrapper {
@@ -1127,7 +1333,63 @@ div.flow {
     }
   }
 
+  div.bangkok {
+    div.wrapper {
+      padding: 20px;
+      ul>li {
+        @include txt (12px,600);
+      }
+    }
+  }
+
+div.special {
+	div.wrapper {
+    p.specialpeople.txtMax {
+      top: 30px;
+      padding: 0;
+      @include txt (18px,600);
+      width: 220px;
+    }
+    div.boxes {
+      display: none;
+    }
+    div.boxesSP {
+      display: block;
+      border: solid 2px #fff;
+      width: 90%;
+      margin: auto;
+      div.benefits {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 60px 0;
+        padding: 0 40px;
+        div.circleSP {
+          border-radius: 50%;
+          background-color: #fff;
+          max-width: 60px;
+          height: 60px;
+          padding: 0;
+          p.txtYellow.txtSmall {
+            @include txt (12px,600);
+            width: 60px;
+            line-height: 60px;
+            margin: 0;
+          }
+        }
+        div.circleSP + p.txtSmall {
+          @include txt (12px,600);
+          margin: 0 0 0 10px;
+        }
+
+      }
+    }
+	}
 }
+
+}
+
+
 
 /*メディアクエリ lgサイズ*/
 @include lg {

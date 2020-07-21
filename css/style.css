@@ -168,7 +168,7 @@ header div.wrapper div.contactWrap div.contactSP {
 div.hero {
   background-size: cover;
   background-position: center;
-  background-image: url(../img/sky.jpg);
+  background-image: url(../img/main.jpg);
 }
 div.hero div.wrapper {
   padding: 50px 0;
@@ -609,10 +609,158 @@ div.flow div.boxesTab {
   display: none;
 }
 
+div.bangkok {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/guia.jpg);
+  color: #fff;
+  position: relative;
+}
+div.bangkok:before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+div.bangkok div.wrapper {
+  width: 80%;
+  padding: 50px;
+  position: relative;
+  z-index: 1;
+}
+div.bangkok div.wrapper h2.txtMax.txtWhite {
+  text-align: left;
+}
+div.bangkok div.wrapper p.txtMin {
+  text-align: left;
+  margin-top: 30px;
+}
+div.bangkok div.wrapper ul {
+  margin-top: 30px;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+div.bangkok div.wrapper ul li {
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 2;
+}
+div.bangkok div.wrapper p.txtMedium {
+  text-align: left;
+  margin-top: 30px;
+}
+
+div.special {
+  background-color: #ebb94d;
+}
+div.special div.wrapper {
+  padding: 60px 0;
+}
+div.special div.wrapper p.txtSmall {
+  margin-top: 30px;
+}
+div.special div.wrapper p.specialpeople.txtMax {
+  position: relative;
+  top: 40px;
+  background-color: #ebb94d;
+  width: 300px;
+  margin: auto;
+  padding: 0 50px;
+}
+div.special div.wrapper div.boxes {
+  border: solid 3px #fff;
+  padding: 60px 50px 50px;
+  max-width: 850px;
+  margin: auto;
+}
+div.special div.wrapper div.boxes div.circle {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 250px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+div.special div.wrapper div.boxes div.circle p.txtSmall {
+  width: 220px;
+  margin: 10px auto;
+}
+div.special div.wrapper div.boxes div.circle + div.circle {
+  margin-left: 60px;
+}
+div.special div.wrapper div.boxesSP {
+  display: none;
+}
+
+div.specialdetail {
+  background-size: cover;
+  background-position: center;
+  background-image: url(../img/normad.jpg);
+  color: #fff;
+  position: relative;
+}
+div.specialdetail:before {
+  content: '';
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+div.specialdetail div.wrapper {
+  padding: 60px 0;
+  position: relative;
+}
+div.specialdetail div.wrapper .txtLarge {
+  margin-top: 30px;
+}
+div.specialdetail div.wrapper div.brackets {
+  margin-top: 30px;
+}
+div.specialdetail div.wrapper div.brackets:before, div.specialdetail div.wrapper div.brackets:after {
+  border-color: #fff;
+}
+
+div.message div.wrapper {
+  padding: 60px 0;
+  width: 85%;
+}
+div.message div.wrapper p.txtLarge {
+  margin-top: 30px;
+}
+div.message div.wrapper div.boxes p img {
+  width: 224px;
+  height: 168px;
+}
+div.message div.wrapper div.boxes div.txtWrap {
+  text-align: left;
+  margin-left: 30px;
+}
+div.message div.wrapper div.boxes div.txtWrap p + p {
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 10px;
+}
+div.message div.wrapper div.boxes div.txtWrap ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin: 30px 0;
+}
+div.message div.wrapper div.boxes div.txtWrap ul li {
+  font-size: 14px;
+  font-weight: 300;
+}
+
 /*メディアクエリ タブレットサイズ*/
 @media (max-width: 767px) {
   .brTAB {
     display: block;
+  }
+
+  .brPC {
+    display: none;
   }
 
   header div.wrapper div.logoWrap p.subTitle {
@@ -858,11 +1006,63 @@ div.flow div.boxesTab {
     margin-top: 10px;
     text-align: left;
   }
+
+  div.special div.wrapper div.boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.special div.wrapper div.boxes div.circle + div.circle {
+    margin: 50px 0 0;
+  }
+
+  div.specialdetail div.wrapper h2.txtMax {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  div.specialdetail div.wrapper p.txtLarge {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  div.message div.wrapper {
+    width: 90%;
+  }
+  div.message div.wrapper div.boxes {
+    flex-direction: column;
+  }
+  div.message div.wrapper div.boxes p img {
+    width: 100%;
+    height: auto;
+  }
+  div.message div.wrapper div.boxes div.txtWrap {
+    text-align: left;
+    margin-left: 0;
+  }
+  div.message div.wrapper div.boxes div.txtWrap p + p {
+    margin-top: 10px;
+  }
+  div.message div.wrapper div.boxes div.txtWrap p {
+    font-size: 14px;
+    font-weight: 300;
+  }
+  div.message div.wrapper div.boxes div.txtWrap ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 30px 0;
+  }
+  div.message div.wrapper div.boxes div.txtWrap ul li {
+    font-size: 14px;
+    font-weight: 300;
+  }
 }
 /*メディアクエリ スマホサイズ*/
 @media (max-width: 420px) {
   .brSP {
     display: block;
+  }
+
+  .brPC {
+    display: none;
   }
 
   header div.wrapper {
@@ -979,6 +1179,57 @@ div.flow div.boxesTab {
     padding: 0 10px;
     font-size: 12px;
     font-weight: 300;
+  }
+
+  div.bangkok div.wrapper {
+    padding: 20px;
+  }
+  div.bangkok div.wrapper ul > li {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  div.special div.wrapper p.specialpeople.txtMax {
+    top: 30px;
+    padding: 0;
+    font-size: 18px;
+    font-weight: 600;
+    width: 220px;
+  }
+  div.special div.wrapper div.boxes {
+    display: none;
+  }
+  div.special div.wrapper div.boxesSP {
+    display: block;
+    border: solid 2px #fff;
+    width: 90%;
+    margin: auto;
+  }
+  div.special div.wrapper div.boxesSP div.benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0;
+    padding: 0 40px;
+  }
+  div.special div.wrapper div.boxesSP div.benefits div.circleSP {
+    border-radius: 50%;
+    background-color: #fff;
+    max-width: 60px;
+    height: 60px;
+    padding: 0;
+  }
+  div.special div.wrapper div.boxesSP div.benefits div.circleSP p.txtYellow.txtSmall {
+    font-size: 12px;
+    font-weight: 600;
+    width: 60px;
+    line-height: 60px;
+    margin: 0;
+  }
+  div.special div.wrapper div.boxesSP div.benefits div.circleSP + p.txtSmall {
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 0 0 10px;
   }
 }
 /*メディアクエリ lgサイズ*/
