@@ -779,10 +779,12 @@ div.message {
 			div.txtWrap {
         text-align: left;
         margin-left: 30px;
-				p + p {
-          @include txt (14px,300);
+        p + p {
           margin-top: 10px;
-				}
+        }
+        p {
+          @include txt (14px,300);
+        }
 				ul {
           list-style-type: disc;
           list-style-position: inside;
@@ -793,6 +795,57 @@ div.message {
 				}
 			}
 		}
+	}
+}
+
+div.contactform {
+  background-color: $colorYellow;
+	div.wrapper {
+    width: 60%;
+    padding: 60px 0;
+    p {
+      margin-top: 30px;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+      div.formdeco {
+        input[type=text],
+        input[type=email],
+        textarea[type=textarea]{
+          box-sizing: border-box;
+          width: 100%;
+          margin: 8px 0;
+          padding: 0.9em;
+          transition: 0s;
+          border: 0px solid;
+          border-radius: 4px;
+          outline: none;
+          font-size: 14px;
+          height: 50px;
+        }
+        input[type=text]:focus,
+        input[type=email]:focus,
+        textarea[type=textarea]:focus {
+          border: 3px solid #FFA500;
+          border-radius: 4px;
+        }
+        textarea#question {
+          height: 100px;
+        }
+      }
+      p.btn {
+        height: 55px;
+        button {
+          background-color: #da6b64;
+          color: #fff;
+          border-style: none;
+          padding-top: 12px;
+          @include txt (24px,600);
+        }
+      }
+    }
 	}
 }
 
@@ -1145,26 +1198,31 @@ div.message {
           }
         }
         div.txtWrap {
-          text-align: left;
           margin-left: 0;
-          p + p {
-            margin-top: 10px;
-          }
-          p {
-            @include txt (14px,300);
-          }
-          ul {
-            list-style-type: disc;
-            list-style-position: inside;
-            margin: 30px 0;
-            li {
-              @include txt (14px,300);
-            }
-          }
         }
       }
     }
   }
+
+  div.contactform {
+    background-color: $colorYellow;
+    div.wrapper {
+      width: 94%;
+      padding: 60px 0;
+      h2 {
+        @include txt (18px,600);
+      }
+      p {
+        @include txt (12px,600);
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+      }
+    }
+  }
+
 
 }
 

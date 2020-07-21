@@ -739,9 +739,11 @@ div.message div.wrapper div.boxes div.txtWrap {
   margin-left: 30px;
 }
 div.message div.wrapper div.boxes div.txtWrap p + p {
+  margin-top: 10px;
+}
+div.message div.wrapper div.boxes div.txtWrap p {
   font-size: 14px;
   font-weight: 300;
-  margin-top: 10px;
 }
 div.message div.wrapper div.boxes div.txtWrap ul {
   list-style-type: disc;
@@ -751,6 +753,56 @@ div.message div.wrapper div.boxes div.txtWrap ul {
 div.message div.wrapper div.boxes div.txtWrap ul li {
   font-size: 14px;
   font-weight: 300;
+}
+
+div.contactform {
+  background-color: #ebb94d;
+}
+div.contactform div.wrapper {
+  width: 60%;
+  padding: 60px 0;
+}
+div.contactform div.wrapper p {
+  margin-top: 30px;
+}
+div.contactform div.wrapper form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+div.contactform div.wrapper form div.formdeco input[type=text],
+div.contactform div.wrapper form div.formdeco input[type=email],
+div.contactform div.wrapper form div.formdeco textarea[type=textarea] {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 8px 0;
+  padding: 0.9em;
+  transition: 0s;
+  border: 0px solid;
+  border-radius: 4px;
+  outline: none;
+  font-size: 14px;
+  height: 50px;
+}
+div.contactform div.wrapper form div.formdeco input[type=text]:focus,
+div.contactform div.wrapper form div.formdeco input[type=email]:focus,
+div.contactform div.wrapper form div.formdeco textarea[type=textarea]:focus {
+  border: 3px solid #FFA500;
+  border-radius: 4px;
+}
+div.contactform div.wrapper form div.formdeco textarea#question {
+  height: 100px;
+}
+div.contactform div.wrapper form p.btn {
+  height: 55px;
+}
+div.contactform div.wrapper form p.btn button {
+  background-color: #da6b64;
+  color: #fff;
+  border-style: none;
+  padding-top: 12px;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 /*メディアクエリ タブレットサイズ*/
@@ -1035,24 +1087,28 @@ div.message div.wrapper div.boxes div.txtWrap ul li {
     height: auto;
   }
   div.message div.wrapper div.boxes div.txtWrap {
-    text-align: left;
     margin-left: 0;
   }
-  div.message div.wrapper div.boxes div.txtWrap p + p {
-    margin-top: 10px;
+
+  div.contactform {
+    background-color: #ebb94d;
   }
-  div.message div.wrapper div.boxes div.txtWrap p {
-    font-size: 14px;
-    font-weight: 300;
+  div.contactform div.wrapper {
+    width: 94%;
+    padding: 60px 0;
   }
-  div.message div.wrapper div.boxes div.txtWrap ul {
-    list-style-type: disc;
-    list-style-position: inside;
-    margin: 30px 0;
+  div.contactform div.wrapper h2 {
+    font-size: 18px;
+    font-weight: 600;
   }
-  div.message div.wrapper div.boxes div.txtWrap ul li {
-    font-size: 14px;
-    font-weight: 300;
+  div.contactform div.wrapper p {
+    font-size: 12px;
+    font-weight: 600;
+  }
+  div.contactform div.wrapper form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
   }
 }
 /*メディアクエリ スマホサイズ*/
