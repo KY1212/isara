@@ -872,6 +872,30 @@ footer div.wrapper p.txtMin {
   margin-top: 10px;
 }
 
+div#pageTop {
+  background-color: #e5e5e5;
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+div#pageTop a {
+  background-color: #999;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  padding: 13px 22.5px;
+}
+
+div#pageTop a:hover {
+  background-color: #666;
+  text-decoration: none;
+}
+
 /*メディアクエリ タブレットサイズ*/
 @media (max-width: 767px) {
   .brTAB {
