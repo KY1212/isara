@@ -1,6 +1,6 @@
 $(function () {
 
-  const box = $(".boxesTab .box");
+  const box = $(".boxesSlide .box");
   const heading = $(".box .heading");
   const contents = $(".box .contents");
 

@@ -150,6 +150,58 @@ div.yellowbox {
   margin-top: 30px;
 }
 
+div.boxesSlide {
+  display: none;
+  div.box {
+    margin-top: 5px;
+    div.heading {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      div.headingleft {
+        display: flex;
+        align-items: center;
+        img {
+          width: 35px;
+        }
+        p.headingFlow.txtSmall {
+          margin-left: 10px;
+        }
+      }
+      i.fas.fa-angle-up {
+        padding-top: 5px;
+      }
+    }
+    div.contents {
+      display: none;
+      text-align: left;
+      line-height: 1.7;
+      padding: 20px;
+      p {
+        margin-top: 20px;
+      }
+    }
+    div.contents.active {
+      display: block;
+    }
+    .box p:not(:first-child) {
+      margin-top: 10px;
+    }
+  }
+}
+
+div.sns {
+  margin-top: 20px;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      line-height: 0;
+      margin-left: 5px;
+    }
+  }
+}
+
 /*=====header=====*/
 header {
 	div.wrapper {
@@ -240,17 +292,7 @@ div.conversion {
         }
 			}
     }
-    div.sns {
-      margin-top: 20px;
-      ul {
-        display: flex;
-        justify-content: center;
-        li {
-          line-height: 0;
-          margin-left: 5px;
-        }
-      }
-    }
+
 	}
 }
 
@@ -597,6 +639,7 @@ div.class {
 
 div.flow {
 	div.wrapper {
+    width: 80%;
 		h2.txtMax {
 		}
 		p.circleImage {
@@ -635,15 +678,17 @@ div.flow {
         }
 			}
     }
+    div.boxesSlide {
+      div.box {
+        background-color: $paleYellow;
+      }
+    }
     p.flowLine {
       line-height: 0;
       img {
         width: calc(100% - 300px);
       }
     }
-  }
-  div.boxesTab {
-    display: none;
   }
 }
 
@@ -849,6 +894,36 @@ div.contactform {
 	}
 }
 
+div.questions {
+  div.wrapper {
+    width: 60%;
+    div.boxesSlide {
+      display: block;
+      div.box {
+        div.heading {
+          border-top-left-radius: 3px;
+          border-top-right-radius: 3px;
+          border: 1px solid #e5e5e5;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #e5e5e5;
+  color: #333;
+	div.wrapper {
+		div.sns {
+      margin-top: 10px;
+		}
+		p.txtMin {
+      margin-top: 10px;
+		}
+	}
+}
+
+
 /*メディアクエリ タブレットサイズ*/
 @include tab {
   .brTAB {
@@ -856,6 +931,12 @@ div.contactform {
   }
   .brPC {
     display: none;
+  }
+  div.boxesSlide {
+    display: block;
+    div.box {
+      background-color: #fff;
+    }
   }
 
   header {
@@ -1121,45 +1202,7 @@ div.contactform {
       p.flowLine {
         display: none;
       }
-      div.boxesTab {
-        display: block;
-        div.box {
-          background-color: $paleYellow;
-          padding: 10px;
-          margin-top: 5px;
-          div.heading {
-            display: flex;
-            justify-content: space-between;
-            div.headingleft {
-              display: flex;
-              align-items: center;
-              img {
-                width: 35px;
-              }
-              p.headingFlow.txtSmall {
-                margin-left: 10px;
-              }
-            }
-            i.fas.fa-angle-up {
-              padding-top: 5px;
-            }
-          }
-          div.contents {
-            display: none;
-            p.txtMin {
-              margin-top: 20px;
-              text-align: left;
-            }
-          }
-          div.contents.active {
-            display: block;
-          }
-          .box p:not(:first-child) {
-            margin-top: 10px;
-            text-align: left;
-          }
-        }
-      }
+
     }
   }
 
