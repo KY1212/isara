@@ -873,7 +873,7 @@ div.questions div.wrapper div.boxesSlide div.box div.heading {
 }
 
 footer {
-  background-color: #e5e5e5;
+  background-color: #ececec;
   color: #333;
 }
 footer div.wrapper div.sns {
@@ -888,14 +888,12 @@ div#pageTop {
   position: fixed;
   bottom: 30px;
   right: 40px;
-  width: 70px;
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 div#pageTop a {
-  background-color: #999;
+  background-color: #ececec;
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -1060,7 +1058,7 @@ div#pageTop a:hover {
   }
   div.answer div.wrapper div.boxes {
     flex-direction: column;
-    padding: 0 50px;
+    padding: 0 10px;
   }
   div.answer div.wrapper div.boxes div.box + div.box {
     margin-top: 40px;
@@ -1068,7 +1066,6 @@ div#pageTop a:hover {
   div.answer div.wrapper div.boxes div.box {
     display: flex;
     justify-content: center;
-    flex-direction: column;
     text-align: left;
   }
   div.answer div.wrapper div.boxes div.box p.image {
@@ -1082,11 +1079,15 @@ div#pageTop a:hover {
   }
   div.answer div.wrapper div.boxes div.box div.comment {
     padding: 0;
-    margin: 10px 0 0;
+    margin: 10px 0 0 20px;
     width: 100%;
   }
 
-  div.class div.wrapper p.txtWhite {
+  div.class div.wrapper h2 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  div.class div.wrapper p {
     font-size: 14px;
     font-weight: 600;
   }
@@ -1126,6 +1127,9 @@ div#pageTop a:hover {
     display: none;
   }
   div.flow div.wrapper p.flowLine {
+    display: none;
+  }
+  div.flow div.wrapper .circleImage {
     display: none;
   }
 
@@ -1183,6 +1187,14 @@ div#pageTop a:hover {
 
   div.questions div.wrapper {
     width: 94%;
+  }
+
+  div#pageTop {
+    bottom: 60px;
+    right: 20px;
+  }
+  div#pageTop a {
+    padding: 4px 12.5px;
   }
 }
 /*メディアクエリ スマホサイズ*/
@@ -1311,6 +1323,24 @@ div#pageTop a:hover {
     font-weight: 300;
   }
 
+  div.answer div.wrapper div.boxes div.box {
+    flex-direction: column;
+  }
+  div.answer div.wrapper div.boxes div.box p.image {
+    height: 100px;
+    width: 100px;
+  }
+  div.answer div.wrapper div.boxes div.box p.image img {
+    width: 100px;
+  }
+  div.answer div.wrapper div.boxes div.box div.comment {
+    margin: 10px 0 0 0;
+  }
+  div.answer div.wrapper div.boxes div.box div.comment p {
+    font-size: 12px;
+    font-weight: 300;
+  }
+
   div.bangkok div.wrapper {
     padding: 20px;
   }
@@ -1365,6 +1395,14 @@ div#pageTop a:hover {
   div.questions div.wrapper p {
     font-size: 10px;
     font-weight: 600;
+  }
+
+  div#pageTop {
+    bottom: 70px;
+    right: 20px;
+  }
+  div#pageTop a {
+    padding: 4px 12.5px;
   }
 }
 /*メディアクエリ lgサイズ*/

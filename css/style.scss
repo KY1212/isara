@@ -913,7 +913,7 @@ div.questions {
 }
 
 footer {
-  background-color: #e5e5e5;
+  background-color: #ececec;
   color: #333;
 	div.wrapper {
 		div.sns {
@@ -924,18 +924,17 @@ footer {
     }
 	}
 }
+
 div#pageTop {
   background-color: #e5e5e5;
   position: fixed;
   bottom: 30px;
   right: 40px;
-  width: 70px;
-  height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
   a {
-    background-color: #999;
+    background-color: #ececec;
     color: #fff;
     text-align: center;
     text-decoration: none;
@@ -1151,7 +1150,7 @@ div#pageTop a:hover {
       }
       div.boxes {
         flex-direction: column;
-        padding: 0 50px;
+        padding: 0 10px;
 
         div.box + div.box {
           margin-top: 40px;
@@ -1159,7 +1158,6 @@ div#pageTop a:hover {
         div.box {
           display: flex;
           justify-content: center;
-          flex-direction: column;
           text-align: left;
           p.image {
             border: solid 3px $colorYellow;
@@ -1172,7 +1170,7 @@ div#pageTop a:hover {
           }
           div.comment {
             padding:0;
-            margin: 10px 0 0;
+            margin: 10px 0 0 20px;
             width: 100%;
           }
         }
@@ -1182,7 +1180,10 @@ div#pageTop a:hover {
 
   div.class {
     div.wrapper {
-      p.txtWhite {
+      h2 {
+        @include txt(20px, 600);
+      }
+      p {
         @include txt(14px, 600);
       }
       div.boxes {
@@ -1223,6 +1224,9 @@ div#pageTop a:hover {
         display: none;
       }
       p.flowLine {
+        display: none;
+      }
+      .circleImage {
         display: none;
       }
     }
@@ -1291,6 +1295,14 @@ div#pageTop a:hover {
   div.questions {
     div.wrapper {
       width: 94%;
+    }
+  }
+
+  div#pageTop {
+    bottom: 60px;
+    right: 20px;
+    a {
+      padding: 4px 12.5px;
     }
   }
 
@@ -1459,6 +1471,29 @@ div#pageTop a:hover {
     }
   }
 
+  div.answer {
+    div.wrapper {
+      div.boxes {
+        div.box {
+          flex-direction: column;
+          p.image {
+            height: 100px;
+            width: 100px;
+            img {
+              width: 100px;
+            }
+          }
+          div.comment {
+            margin: 10px 0 0 0;
+            p {
+              @include txt (12px,300);
+            }
+          }
+        }
+      }
+    }
+  }
+
   div.bangkok {
     div.wrapper {
       padding: 20px;
@@ -1517,6 +1552,14 @@ div#pageTop a:hover {
       p {
         @include txt (10px,600);
       }
+    }
+  }
+
+  div#pageTop {
+    bottom: 70px;
+    right: 20px;
+    a {
+      padding: 4px 12.5px;
     }
   }
 
