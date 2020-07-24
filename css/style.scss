@@ -154,6 +154,7 @@ div.boxesSlide {
   display: none;
   div.box {
     margin-top: 5px;
+    cursor: pointer;
     div.heading {
       display: flex;
       justify-content: space-between;
@@ -169,7 +170,7 @@ div.boxesSlide {
         }
       }
       i.fas.fa-angle-up {
-        padding-top: 5px;
+        padding: 5px 0 0 5px;
       }
     }
     div.contents {
@@ -231,7 +232,11 @@ header {
         right: 0px;
         top: 16px;
         padding: 11px 40px;
+        &:hover {
+          background-color: #d84940;
+        }
       }
+
       div.contactSP {
         display: none;
       }
@@ -276,13 +281,17 @@ div.conversion {
         font-weight: 600;
       }
 		}
-		div.btn.contactPC {
+		div.btn.contactPC.txtWhite {
       max-width: 806px;
       margin: 10px auto 0;
       padding: 25px 50px;
       border-radius: 9999px;
       font-weight: 600;
-		}
+      &:hover {
+        background-color: #d84940;
+      }
+    }
+
 		div.currently {
 			ul {
         margin-top: 20px;
@@ -498,6 +507,7 @@ div.teacher {
 					img {
             width: 100%;
             max-width: 200px;
+            border-radius: 50%;
 					}
 				}
 				p {
@@ -529,10 +539,6 @@ div.why {
     margin-left: -25px;
   }
 	div.wrapper {
-		div.Qicon {
-			img {
-			}
-		}
 		div.brackets {
       &:before,
       &:after {
@@ -597,11 +603,8 @@ div.class {
   background-image: url(../img/freelance.PNG);
 	div.wrapper {
     padding: 60px 0;
-		h2.txtMax.txtWhite {
-		}
 		p.txtWhite {
       @include txt(14px, 600);
-
 		}
 		div.boxes {
       align-items: flex-start;
@@ -640,8 +643,6 @@ div.class {
 div.flow {
 	div.wrapper {
     width: 80%;
-		h2.txtMax {
-		}
 		p.circleImage {
       margin: 30px 0;
 			img {
@@ -740,8 +741,6 @@ div.special {
     padding: 60px 0;
 		p.txtSmall {
       margin-top: 30px;
-			span.txtWhite {
-			}
     }
     p.specialpeople.txtMax {
       position: relative;
@@ -882,8 +881,11 @@ div.contactform {
       }
       p.btn {
         height: 55px;
+        &:hover {
+          background-color: #d84940;
+        }
         button {
-          background-color: #da6b64;
+          background-color: transparent;
           color: #fff;
           border-style: none;
           padding-top: 12px;
@@ -1223,7 +1225,6 @@ div#pageTop a:hover {
       p.flowLine {
         display: none;
       }
-
     }
   }
 
@@ -1287,10 +1288,13 @@ div#pageTop a:hover {
     }
   }
 
+  div.questions {
+    div.wrapper {
+      width: 94%;
+    }
+  }
 
 }
-
-
 
 /*メディアクエリ スマホサイズ*/
 @include sp {
@@ -1299,7 +1303,7 @@ div#pageTop a:hover {
   }
   .brPC {
   display: none;
-}
+  }
 
   header {
     div.wrapper {
@@ -1464,54 +1468,59 @@ div#pageTop a:hover {
     }
   }
 
-div.special {
-	div.wrapper {
-    p.specialpeople.txtMax {
-      top: 30px;
-      padding: 0;
-      @include txt (18px,600);
-      width: 220px;
-    }
-    div.boxes {
-      display: none;
-    }
-    div.boxesSP {
-      display: block;
-      border: solid 2px #fff;
-      width: 90%;
-      margin: auto;
-      div.benefits {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 60px 0;
-        padding: 0 40px;
-        div.circleSP {
-          border-radius: 50%;
-          background-color: #fff;
-          max-width: 60px;
-          height: 60px;
-          padding: 0;
-          p.txtYellow.txtSmall {
+  div.special {
+    div.wrapper {
+      p.specialpeople.txtMax {
+        top: 30px;
+        padding: 0;
+        @include txt (18px,600);
+        width: 220px;
+      }
+      div.boxes {
+        display: none;
+      }
+      div.boxesSP {
+        display: block;
+        border: solid 2px #fff;
+        width: 90%;
+        margin: auto;
+        div.benefits {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 60px 0;
+          padding: 0 40px;
+          div.circleSP {
+            border-radius: 50%;
+            background-color: #fff;
+            max-width: 60px;
+            height: 60px;
+            padding: 0;
+            p.txtYellow.txtSmall {
+              @include txt (12px,600);
+              width: 60px;
+              line-height: 60px;
+              margin: 0;
+            }
+          }
+          div.circleSP + p.txtSmall {
             @include txt (12px,600);
-            width: 60px;
-            line-height: 60px;
-            margin: 0;
+            margin: 0 0 0 10px;
           }
         }
-        div.circleSP + p.txtSmall {
-          @include txt (12px,600);
-          margin: 0 0 0 10px;
-        }
-
       }
     }
-	}
-}
+  }
+
+  div.questions {
+    div.wrapper {
+      p {
+        @include txt (10px,600);
+      }
+    }
+  }
 
 }
-
-
 
 /*メディアクエリ lgサイズ*/
 @include lg {

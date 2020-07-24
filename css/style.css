@@ -133,6 +133,7 @@ div.boxesSlide {
 }
 div.boxesSlide div.box {
   margin-top: 5px;
+  cursor: pointer;
 }
 div.boxesSlide div.box div.heading {
   display: flex;
@@ -150,7 +151,7 @@ div.boxesSlide div.box div.heading div.headingleft p.headingFlow.txtSmall {
   margin-left: 10px;
 }
 div.boxesSlide div.box div.heading i.fas.fa-angle-up {
-  padding-top: 5px;
+  padding: 5px 0 0 5px;
 }
 div.boxesSlide div.box div.contents {
   display: none;
@@ -212,6 +213,9 @@ header div.wrapper div.contactWrap div.contactPC {
   top: 16px;
   padding: 11px 40px;
 }
+header div.wrapper div.contactWrap div.contactPC:hover {
+  background-color: #d84940;
+}
 header div.wrapper div.contactWrap div.contactSP {
   display: none;
 }
@@ -257,12 +261,15 @@ div.conversion div.wrapper p:not(:first-child) code {
   padding: 2px 4px;
   font-weight: 600;
 }
-div.conversion div.wrapper div.btn.contactPC {
+div.conversion div.wrapper div.btn.contactPC.txtWhite {
   max-width: 806px;
   margin: 10px auto 0;
   padding: 25px 50px;
   border-radius: 9999px;
   font-weight: 600;
+}
+div.conversion div.wrapper div.btn.contactPC.txtWhite:hover {
+  background-color: #d84940;
 }
 div.conversion div.wrapper div.currently ul {
   margin-top: 20px;
@@ -476,6 +483,7 @@ div.teacher div.wrapper div.boxes div.box div.circleImg {
 div.teacher div.wrapper div.boxes div.box div.circleImg img {
   width: 100%;
   max-width: 200px;
+  border-radius: 50%;
 }
 div.teacher div.wrapper div.boxes div.box p {
   font-size: 14px;
@@ -840,8 +848,11 @@ div.contactform div.wrapper form div.formdeco textarea#question {
 div.contactform div.wrapper form p.btn {
   height: 55px;
 }
+div.contactform div.wrapper form p.btn:hover {
+  background-color: #d84940;
+}
 div.contactform div.wrapper form p.btn button {
-  background-color: #da6b64;
+  background-color: transparent;
   color: #fff;
   border-style: none;
   padding-top: 12px;
@@ -1169,6 +1180,10 @@ div#pageTop a:hover {
     flex-direction: column;
     margin-top: 30px;
   }
+
+  div.questions div.wrapper {
+    width: 94%;
+  }
 }
 /*メディアクエリ スマホサイズ*/
 @media (max-width: 420px) {
@@ -1345,6 +1360,11 @@ div#pageTop a:hover {
     font-size: 12px;
     font-weight: 600;
     margin: 0 0 0 10px;
+  }
+
+  div.questions div.wrapper p {
+    font-size: 10px;
+    font-weight: 600;
   }
 }
 /*メディアクエリ lgサイズ*/
