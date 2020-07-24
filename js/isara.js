@@ -9,11 +9,24 @@ $(function () {
 
   box.click(function(){
 
+    const boxCount = $(box).length;
+
+    const $this = [
+      { index: `${$(this).index(this)+1}`},
+      { tilt: rotateIcon }
+    ];
+
+    $.each($this, function(index,tilt){
+      console.log(index+":"+tilt);
+      
+    });
+
+
 		$(heading).not(this).next(contents).slideUp();
     $(this).find(contents).stop(true).slideToggle();
 
-    $(this).find(icon).css("transform",`rotate(${rotateIcon}deg)`),
-    $(this).find(icon).css("transition","transform 0.6s");
+    $this.find(icon).css("transform",`rotate(${rotateIcon}deg)`),
+    $this.find(icon).css("transition","transform 0.3s");
 
     console.log("終"+rotateIcon);
 

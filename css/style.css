@@ -861,7 +861,8 @@ div.contactform div.wrapper form p.btn button {
 }
 
 div.questions div.wrapper {
-  width: 60%;
+  width: 84%;
+  max-width: 700px;
 }
 div.questions div.wrapper div.boxesSlide {
   display: block;
