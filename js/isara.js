@@ -9,34 +9,14 @@ $(function () {
 
   box.click(function(){
 
-    const boxCount = $(box).length;
-
-    const $this = [
-      { index: `${$(this).index(this)+1}`},
-      { tilt: rotateIcon }
-    ];
-
-    $.each($this, function(index,tilt){
-      console.log(index+":"+tilt);
-      
-    });
-
-
-		$(heading).not(this).next(contents).slideUp();
+    if($(this).find(".heading>i").is(".fas.fa-angle-up")){
+      $(this).find(".heading>i").removeClass().addClass("fas fa-angle-down");
+    }else{
+      $(this).find(".heading>i").removeClass().addClass("fas fa-angle-up");
+    }
+    $(heading).not(this).next(contents).slideUp();
     $(this).find(contents).stop(true).slideToggle();
 
-    $this.find(icon).css("transform",`rotate(${rotateIcon}deg)`),
-    $this.find(icon).css("transition","transform 0.3s");
-
-    console.log("終"+rotateIcon);
-
-    if(rotateIcon==0){
-      rotateIcon= rotateIcon+180;
-      console.log("0 "+rotateIcon);
-    }else if(rotateIcon>=180){
-      rotateIcon=0;
-      console.log("180 "+rotateIcon);
-    }
   });
 
   $(function(){

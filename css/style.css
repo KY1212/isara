@@ -151,7 +151,10 @@ div.boxesSlide div.box div.heading div.headingleft p.headingFlow.txtSmall {
   margin-left: 10px;
 }
 div.boxesSlide div.box div.heading i.fas.fa-angle-up {
-  padding: 5px 0 0 5px;
+  display: block;
+}
+div.boxesSlide div.box div.heading i.fas.fa-angle-down {
+  display: block;
 }
 div.boxesSlide div.box div.contents {
   display: none;
