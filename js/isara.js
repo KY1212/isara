@@ -4,7 +4,7 @@ $(function () {
   const $heading = $(".box .heading");
   const $contents = $(".box .contents");
 
-  box.click(function(){
+  $box.click(function(){
     if($(this).find(".heading>i").is(".fas.fa-angle-up")){
       $(this).find(".heading>i").removeClass().addClass("fas fa-angle-down");
     }else{
